@@ -8,12 +8,14 @@ import java.util.concurrent.ConcurrentHashMap;
 public class FloorRepository {
 
     private Map<UUID, Floor> floors = new ConcurrentHashMap<>();
-    private Map<Integer,UUID> floorNumberToId = new ConcurrentHashMap<>();
+    private Map<Integer, UUID> floorNumberToId = new ConcurrentHashMap<>();
 
-
-    public Floor save(Floor floor){
-        floors.put(floor.getId(),floor);
-        floorNumberToId.put(floor.getFloorNumber(),floor.getId());
+    public Floor save(Floor floor) {
+        if (floor.getId() == null) {
+            floor.setId(UUID.randomUUID());
+        }
+        floors.put(floor.getId(), floor);
+        floorNumberToId.put(floor.getFloorNumber(), floor.getId());
         return floor;
     }
 
@@ -26,9 +28,6 @@ public class FloorRepository {
         return floorId != null ? Optional.ofNullable(floors.get(floorId)) : Optional.empty();
     }
 
-
-
-
     public List<Floor> findAll() {
         return new ArrayList<>(floors.values());
     }
@@ -37,7 +36,6 @@ public class FloorRepository {
         return floorNumberToId.containsKey(floorNumber);
     }
 
-
     public void delete(UUID floorId) {
         Floor floor = floors.remove(floorId);
         if (floor != null) {
@@ -45,10 +43,8 @@ public class FloorRepository {
         }
     }
 
-
     public void clear() {
         floors.clear();
         floorNumberToId.clear();
     }
-
 }
