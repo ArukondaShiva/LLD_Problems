@@ -1,0 +1,10 @@
+[INFO] 2025-09-23T14:34:05.542580400Z - This message goes to both console and file
+[ERROR] 2025-09-23T14:34:05.559376700Z - This error also goes to both destinations
+[INFO] 2025-09-24T03:36:37.686764500Z - This message goes to both console and file
+[ERROR] 2025-09-24T03:36:37.688758500Z - This error also goes to both destinations
+[INFO] 2025-09-24T04:49:16.948938700Z - This message goes to both console and file
+[ERROR] 2025-09-24T04:49:16.955943300Z - This error also goes to both destinations
+[INFO] 2025-09-24T04:49:29.302532100Z - This message goes to both console and file
+[ERROR] 2025-09-24T04:49:29.305532900Z - This error also goes to both destinations
+[INFO] 2025-09-24T04:53:51.547139300Z - This message goes to both console and file
+[ERROR] 2025-09-24T04:53:51.554140100Z - This error also goes to both destinations
