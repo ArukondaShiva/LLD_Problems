@@ -12,6 +12,7 @@ public class Subscriber {
 
     public Subscriber(){
 
+
     }
 
     public Subscriber(String id,String email,String realtimeConnectionId,boolean isOnline,long createdAt,long lastHeartbeat){
