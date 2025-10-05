@@ -2,7 +2,7 @@ package org.example._05_taskmanagementsystem.domain.observer;
 
 import org.example._05_taskmanagementsystem.domain.ChangeType;
 
-public class EmailSubscriber implements  TaskSubscriber{
+public class EmailSubscriber implements TaskSubscriber{
 
     private String emailService;
 
